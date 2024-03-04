@@ -17,7 +17,7 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   scroll-behavior: smooth;
-  transition: color 100ms linear, background-color 800ms linear;
+  transition: color 100ms linear, background-color 500ms linear;
 }
 
 body {
@@ -315,7 +315,7 @@ body {
 
   .gallery-info-list-item h4,
   .gallery-info-list-item p {
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
 }
 
