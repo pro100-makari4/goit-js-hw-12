@@ -2,6 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import { getImages } from '/js/pixabay-api.js';
+import { scrollToNewImages } from '/js/scroll-functions.js';
 import errorIcon from '/img/error-icon.png';
 import cautionIcon from '/img/caution-icon.png';
 
@@ -35,7 +36,6 @@ async function searchPhotos(event) {
       messageImagesDidNotFound();
     } else {
       renderImages(images, gallery);
-      SIMPLY_LIGHTBOX.refresh();
     }
   } catch {
     messageImagesDidNotFound();
@@ -65,7 +65,7 @@ async function loadNewPhotos() {
       messageImagesDidNotFound(endReached);
     } else {
       renderImages(images, gallery);
-      SIMPLY_LIGHTBOX.refresh();
+      scrollToNewImages();
     }
   } catch {
     messageImagesDidNotFound();
@@ -73,7 +73,6 @@ async function loadNewPhotos() {
     if (endReached) {
       loadMoreBtn.classList.add('is-hidden');
       loader.classList.add('is-hidden');
-      // додати кнопку догори
     } else {
       finallyUpdate();
     }
@@ -142,4 +141,5 @@ function renderImages(images, galleryElement) {
     .join('');
 
   galleryElement.insertAdjacentHTML('beforeend', galleryHTML);
+  SIMPLY_LIGHTBOX.refresh();
 }
