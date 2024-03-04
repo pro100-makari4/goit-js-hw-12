@@ -65,7 +65,6 @@ async function loadNewPhotos() {
       messageImagesDidNotFound(endReached);
     } else {
       renderImages(images, gallery);
-      scrollToNewImages();
     }
   } catch {
     messageImagesDidNotFound();
@@ -75,6 +74,7 @@ async function loadNewPhotos() {
       loader.classList.add('is-hidden');
     } else {
       finallyUpdate();
+      scrollToNewImages();
     }
   }
 }

@@ -3,7 +3,6 @@ const goTopButton = document.querySelector('.go-top-btn');
 goTopButton.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
   });
 });
 
@@ -23,8 +22,8 @@ function getGalleryItemHeight() {
   const windowWidthInPx = window.innerWidth;
 
   if (windowWidthInPx <= 500) {
-    return rect['height'] * 2;
+    return rect['height'] * 2 + 24;
   } else {
-    return rect['height'] * 2 + 24 * 2;
+    return rect['height'] * 2 + 20 * 2;
   }
 }

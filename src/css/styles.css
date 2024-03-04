@@ -17,9 +17,6 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   transition: 0.5s;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
@@ -303,7 +300,7 @@ body {
 
 .gallery-info-list-item h4,
 .gallery-info-list-item p {
-  font-size: 1.3vw;
+  font-size: 1.25vw;
 }
 
 
