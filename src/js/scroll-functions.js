@@ -23,8 +23,8 @@ function getGalleryItemHeight() {
   const windowWidthInPx = window.innerWidth;
 
   if (windowWidthInPx <= 500) {
-    return rect['height'] * 2 - 48;
-  } else {
     return rect['height'] * 2;
+  } else {
+    return rect['height'] * 2 + 24 * 2;
   }
 }
