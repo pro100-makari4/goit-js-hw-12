@@ -11,6 +11,7 @@ const input = document.querySelector('.search-input');
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more-button');
 const loader = document.querySelector('.loader');
+const goTopBtn = document.querySelector('.go-top-btn');
 const SIMPLY_LIGHTBOX = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 150,
@@ -43,9 +44,11 @@ async function searchPhotos(event) {
     if (images.length === 0) {
       loadMoreBtn.classList.add('is-hidden');
       loader.classList.add('is-hidden');
+      goTopBtn.classList.add('is-hidden');
     } else {
       finallyUpdate();
       form.reset();
+      goTopBtn.classList.remove('is-hidden');
     }
   }
 }

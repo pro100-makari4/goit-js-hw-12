@@ -16,7 +16,6 @@
   padding: 0;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  /* transition: 500ms; */
   scroll-behavior: smooth;
   transition: color 100ms linear, background-color 800ms linear;
 }
