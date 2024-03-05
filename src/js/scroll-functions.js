@@ -7,12 +7,7 @@ goTopButton.addEventListener('click', () => {
 });
 
 export function scrollToNewImages() {
-  const rect =
-    document.querySelector('.gallery-item').getBoundingClientRect().height * 2 +
-    48;
-
-  let currentScrollPosition = window.scrollY;
   window.scrollTo({
-    top: currentScrollPosition + rect,
+    top: window.scrollY + window.innerHeight * 0.9,
   });
 }
