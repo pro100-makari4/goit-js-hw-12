@@ -189,12 +189,11 @@ body {
   }
 }
 
-/* 
 .rgb-style-btn:hover::before {
   opacity: 1;
-} */
+}
 
-/* 
+
 .rgb-style-btn:active:after {
   background: transparent;
 }
@@ -202,7 +201,7 @@ body {
 .rgb-style-btn:active {
   color: #000;
   font-weight: bold;
-} */
+}
 
 @media (hover: none) {
 
