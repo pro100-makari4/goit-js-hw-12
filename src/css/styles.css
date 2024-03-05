@@ -133,6 +133,7 @@ body {
 
 .rgb-style-btn {
   padding: 10px 30px;
+  margin: 0;
   border: none;
   outline: none;
   color: #FFF;
@@ -188,10 +189,12 @@ body {
   }
 }
 
+/* 
 .rgb-style-btn:hover::before {
   opacity: 1;
-}
+} */
 
+/* 
 .rgb-style-btn:active:after {
   background: transparent;
 }
@@ -199,6 +202,22 @@ body {
 .rgb-style-btn:active {
   color: #000;
   font-weight: bold;
+} */
+
+@media (hover: none) {
+
+  .rgb-style-btn:active::before {
+    opacity: 1;
+  }
+
+  /* .rgb-style-btn:active:after {
+    background: transparent;
+  }
+
+  .rgb-style-btn:active {
+    color: #000;
+    font-weight: bold;
+  } */
 }
 
 .load-more-button {
@@ -277,11 +296,6 @@ body {
 
 .gallery .gallery-image {
   display: block;
-  /* width: 100%; */
-  /* height: 35.5vh; */
-  /* min-height: 260px;
-  max-height: 285px; */
-
   width: 100%;
   height: 275px;
   cursor: -moz-zoom-in;
