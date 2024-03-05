@@ -6,24 +6,13 @@ goTopButton.addEventListener('click', () => {
   });
 });
 
-
-
 export function scrollToNewImages() {
-  const galleryItemHeight = getGalleryItemHeight();
+  const rect =
+    document.querySelector('.gallery-item').getBoundingClientRect().height * 2 +
+    48;
 
   let currentScrollPosition = window.scrollY;
   window.scrollTo({
-    top: currentScrollPosition + galleryItemHeight,
+    top: currentScrollPosition + rect,
   });
-}
-
-function getGalleryItemHeight() {
-  const rect = document.querySelector('.gallery-item').getBoundingClientRect();
-  const windowWidthInPx = window.innerWidth;
-
-  if (windowWidthInPx <= 500) {
-    return rect['height'] * 2 + 100;
-  } else {
-    return rect['height'] * 2 + (60 * 2);
-  }
 }
